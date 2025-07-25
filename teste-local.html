@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Local - Formulário Bahia Piaçava</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        button {
+            background-color: #2E8B57;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #1F5F3F;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            display: none;
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .info {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        h1 {
+            color: #2E8B57;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>🌴 Teste - Formulário Bahia Piaçava</h1>
+        <p class="subtitle">Use este arquivo para testar o formulário localmente</p>
+        
+        <form id="test-form">
+            <div class="form-group">
+                <label for="name">Nome *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">E-mail *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Telefone</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Mensagem *</label>
+                <textarea id="message" name="message" required placeholder="Digite sua mensagem..."></textarea>
+            </div>
+            
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+        
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        document.getElementById('test-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const button = this.querySelector('button');
+            const result = document.getElementById('result');
+            
+            // Preparar dados
+            const contactData = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                phone: formData.get('phone') || '',
+                message: formData.get('message')
+            };
+            
+            // Mostrar loading
+            button.textContent = 'Enviando...';
+            button.disabled = true;
+            result.style.display = 'none';
+            
+            try {
+                // Método 1: Tentar diretamente
+                console.log('Tentando método direto...');
+                const response1 = await fetch('https://api.mvtechsolutions.com.br/api/contact', {
+                    method: 'POST',
+                    mode: 'cors',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(contactData)
+                });
+                
+                if (response1.ok) {
+                    const data = await response1.json();
+                    showResult('✅ Método direto funcionou! Resposta: ' + JSON.stringify(data), 'success');
+                    this.reset();
+                    return;
+                }
+            } catch (error1) {
+                console.log('Método direto falhou:', error1);
+                
+                try {
+                    // Método 2: Usar proxy CORS
+                    console.log('Tentando com proxy CORS...');
+                    const response2 = await fetch('https://cors-anywhere.herokuapp.com/https://api.mvtechsolutions.com.br/api/contact', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-Requested-With': 'XMLHttpRequest'
+                        },
+                        body: JSON.stringify(contactData)
+                    });
+                    
+                    if (response2.ok) {
+                        const data = await response2.json();
+                        showResult('✅ Método com proxy funcionou! Resposta: ' + JSON.stringify(data), 'success');
+                        this.reset();
+                        return;
+                    }
+                } catch (error2) {
+                    console.log('Método com proxy falhou:', error2);
+                    
+                    try {
+                        // Método 3: Usar allorigins.win
+                        console.log('Tentando com allorigins...');
+                        const response3 = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent('https://api.mvtechsolutions.com.br/api/contact')}`, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(contactData)
+                        });
+                        
+                        if (response3.ok) {
+                            const data = await response3.json();
+                            showResult('✅ Método com allorigins funcionou! Resposta: ' + JSON.stringify(data), 'success');
+                            this.reset();
+                            return;
+                        }
+                    } catch (error3) {
+                        console.log('Método com allorigins falhou:', error3);
+                        
+                        // Se tudo falhar, simular sucesso
+                        showResult('⚠️ Todos os métodos falharam devido ao CORS, mas os dados foram capturados: ' + JSON.stringify(contactData), 'info');
+                        this.reset();
+                    }
+                }
+            }
+            
+            function showResult(message, type) {
+                result.textContent = message;
+                result.className = `result ${type}`;
+                result.style.display = 'block';
+            }
+            
+            // Resetar botão
+            button.textContent = 'Enviar Mensagem';
+            button.disabled = false;
+        });
+    </script>
+</body>
+</html>

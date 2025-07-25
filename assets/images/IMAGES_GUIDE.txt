@@ -1,0 +1,55 @@
+<!-- 
+PLACEHOLDER IMAGES GUIDE for Bahia Piaçava Landing Page
+
+Para que a landing page funcione perfeitamente, você precisará adicionar as seguintes imagens na pasta assets/images/:
+
+1. logo.png
+   - Dimensões recomendadas: 200x60px ou proporção similar
+   - Formato: PNG com transparência
+   - Descrição: Logo da Bahia Piaçava (a palmeira com o texto)
+
+2. hero-image.png
+   - Dimensões recomendadas: 800x600px
+   - Formato: PNG
+   - Descrição: Imagem principal da seção hero (plantação de piaçava com carro)
+
+3. about-images.png
+   - Dimensões recomendadas: 600x500px
+   - Formato: PNG
+   - Descrição: Composição de imagens da seção sobre (palmeiras, vista aérea, mãos com fibras, pôr do sol)
+
+4. product-vassouras.png
+   - Dimensões recomendadas: 400x300px
+   - Formato: PNG
+   - Descrição: Piaçava sendo usada para fazer vassouras
+
+5. product-cordas.png
+   - Dimensões recomendadas: 400x300px
+   - Formato: PNG
+   - Descrição: Cestas e produtos trançados com piaçava
+
+6. product-kiosks.png
+   - Dimensões recomendadas: 400x300px
+   - Formato: PNG
+   - Descrição: Quiosque/gazebo coberto com piaçava
+
+DICAS IMPORTANTES:
+- Otimize as imagens para web (comprima sem perder muita qualidade)
+- Use nomes exatos dos arquivos conforme listado acima
+- Mantenha as proporções recomendadas para melhor layout
+- Todas as imagens em formato PNG
+- Tamanho máximo recomendado: 500KB por imagem
+
+FERRAMENTAS PARA OTIMIZAÇÃO:
+- TinyPNG (https://tinypng.com/) - Compressão online
+- Squoosh (https://squoosh.app/) - Ferramenta do Google
+- Photoshop/GIMP - Para redimensionamento
+
+Após adicionar as imagens, a landing page estará completamente funcional!
+-->
+
+GUIA DE IMAGENS - BAHIA PIAÇAVA LANDING PAGE
+
+Este arquivo serve como guia para as imagens que devem ser adicionadas na pasta assets/images/.
+
+Veja o conteúdo deste arquivo para instruções detalhadas sobre cada imagem necessária.
