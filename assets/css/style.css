@@ -115,6 +115,62 @@ button {
   line-height: 1.6;
 }
 
+.language-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.language-btn {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--border-light);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text-dark);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.language-btn:hover {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.language-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .language-selector {
+    margin-top: 1rem;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  gap: 1rem;
+}
+
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .nav__actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
 /* Buttons */
 .btn {
   display: inline-flex;
@@ -164,6 +220,10 @@ button {
 .btn--full {
   width: 100%;
   grid-column: span 2;
+}
+
+textarea {
+  resize: none;
 }
 
 /* ===============================
@@ -752,7 +812,6 @@ button {
 }
 
 .form__textarea {
-  resize: vertical;
   min-height: 120px;
 }
 
@@ -789,6 +848,35 @@ button {
 .contact__info-text {
   color: var(--text-light);
   line-height: 1.6;
+}
+
+.contact__map-wrapper {
+  margin-top: var(--spacing-lg);
+  background: var(--text-white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-light);
+  padding: var(--spacing-lg);
+  text-align: center;
+}
+
+.contact__map-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: var(--spacing-md);
+  text-align: start;
+}
+
+.contact__map {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+}
+
+iframe {
+  width: 100%;
 }
 
 /* ===============================
@@ -871,6 +959,202 @@ button {
   text-align: left;
 }
 
+.footer__social-media {
+  width: 2rem;
+  height: 2rem;
+}
+
+.whatsapp-float {
+  position: fixed;
+  right: 50px;
+  bottom: 45px;
+  z-index: 2000;
+  background: #14be66;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+
+.whatsapp-float:hover {
+  background: #128c7e;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.22);
+  transform: scale(1.07);
+}
+
+.whatsapp-float__icon {
+  width: 54px;
+  height: 54px;
+  color: #fff;
+  stroke-width: 2.5;
+}
+
+/* ===============================
+   MODAL DE PRODUTO
+   =============================== */
+.product-modal {
+  display: none;
+  position: fixed;
+  z-index: 3000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  overflow-y: auto;
+}
+
+.product-modal.active {
+  display: flex;
+}
+
+.product-modal__overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+
+.product-modal__content {
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  width: 95vw;
+  max-height: 95vh;
+  padding: 62px 40px 40px 40px;
+  overflow: visible;
+}
+
+.product-modal__close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.product-modal__carousel {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+
+.carousel__prev,
+.carousel__next {
+  border: none;
+  color: #A4A4A4;
+  font-size: 2rem;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: background 0.2s;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel__prev:hover,
+.carousel__next:hover {
+  background: #a1a1a1;
+  color: #ffffff;
+}
+
+.carousel__image {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
+  background: #f7f7f7;
+  margin: 0 0.5rem;
+}
+
+.product-modal__text {
+  width: 75%;
+  text-align: left;
+  margin-top: 0.5rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.product-modal__title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  text-align: left;
+  width: 100%;
+}
+
+.product-modal__description {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+  text-align: left;
+  width: 100%;
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 600px) {
+  .product-modal__content {
+    max-width: 90vw;
+    width: 99vw;
+    padding: 60px 15px 20px 15px;
+  }
+
+  .carousel__image {
+    width: 60vw;
+    max-width: 220px;
+    height: 40vw;
+    max-height: 180px;
+  }
+
+  .carousel__prev,
+  .carousel__next {
+    width: 34px;
+    height: 34px;
+    font-size: 1.5rem;
+  }
+
+  .product-modal__title {
+    font-size: 1.1rem;
+  }
+
+  .product-modal__description {
+    font-size: 0.95rem;
+  }
+
+  .product-modal__text {
+    width: 60%;
+  }
+}
+
 /* ===============================
    RESPONSIVE DESIGN
    =============================== */
@@ -921,8 +1205,7 @@ button {
     gap: var(--spacing-lg);
   }
 
-  .contact__form-wrapper,
-  .contact__info {
+  .contact__form-wrapper {
     padding: var(--spacing-md);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-light);
@@ -931,6 +1214,15 @@ button {
 
   .contact__form-wrapper {
     height: auto;
+  }
+
+  .contact__map-wrapper {
+    padding: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+  }
+
+  .contact__map iframe {
+    height: 220px;
   }
 
   /* Navigation */
@@ -1018,8 +1310,7 @@ button {
     gap: var(--spacing-md);
   }
 
-  .contact__form-wrapper,
-  .contact__info {
+  .contact__form-wrapper {
     padding: var(--spacing-sm);
     border-radius: var(--border-radius);
     margin-bottom: var(--spacing-md);
