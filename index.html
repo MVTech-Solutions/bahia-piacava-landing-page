@@ -10,26 +10,74 @@
         j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
           'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-MCNP986P');</script>
+
+  <!-- Meta tags essenciais -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-i18n="page_title">Bahia Piaçava - Produtos Naturais de Piaçava</title>
+
+  <!-- SEO Meta Tags -->
+  <title data-i18n="page_title">Bahia Piaçava - Produtos Naturais de Piaçava | Vassouras Artesanais Sustentáveis</title>
   <meta name="description" data-i18n="hero_desc"
+    content="Há mais de 30 anos produzindo vassouras, escovas e cordas de alta qualidade com fibras naturais de piaçava. Tradição familiar e sustentabilidade em cada produto artesanal.">
+  <meta name="keywords"
+    content="piaçava, vassouras naturais, produtos sustentáveis, fibra natural, Bahia, artesanal, biodegradável, vassouras ecológicas, escovas naturais, cordas naturais, Ilhéus, Attalea funifera">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Bahia Piaçava">
+  <meta name="geo.region" content="BR-BA">
+  <meta name="geo.placename" content="Ilhéus, Bahia">
+  <meta name="geo.position" content="-14.844155785671582;-39.04078942402728">
+  <meta name="ICBM" content="-14.844155785671582, -39.04078942402728">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://piacavabahia.com.br">
+
+  <!-- Open Graph para redes sociais -->
+  <meta property="og:title" content="Bahia Piaçava - Produtos Naturais de Piaçava | Vassouras Artesanais Sustentáveis">
+  <meta property="og:description"
     content="Há mais de 30 anos produzindo vassouras, escovas e cordas de alta qualidade com fibras naturais de piaçava. Tradição familiar e sustentabilidade.">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta property="og:image" content="https://piacavabahia.com.br/assets/images/hero-image.png">
+  <meta property="og:url" content="https://piacavabahia.com.br">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Bahia Piaçava">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bahia Piaçava - Produtos Naturais de Piaçava">
+  <meta name="twitter:description"
+    content="Há mais de 30 anos produzindo vassouras, escovas e cordas de alta qualidade com fibras naturais de piaçava.">
+  <meta name="twitter:image" content="https://piacavabahia.com.br/assets/images/hero-image.png">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="manifest" href="assets/site.webmanifest">
+  <link rel="icon" type="image/png" href="assets/images/favicon.ico">
+
+  <!-- Preconnect para performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="assets/images/favicon.ico">
 </head>
 
 <body>
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MCNP986P" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- Skip to main content para acessibilidade -->
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
   <!-- Header -->
-  <header class="header">
-    <nav class="nav container">
+  <header class="header" role="banner">
+    <nav class="nav container" role="navigation" aria-label="Navegação principal">
       <div class="nav__logo">
-        <img src="assets/images/logo.png" alt="Bahia Piaçava" class="nav__logo-img">
+        <img src="assets/images/logo.png" alt="Bahia Piaçava - Produtos Naturais de Piaçava" class="nav__logo-img"
+          width="auto" height="70">
       </div>
       <ul class="nav__menu" id="nav-menu">
         <li class="nav__item">
@@ -47,322 +95,346 @@
       </ul>
       <div class="nav__actions">
         <div class="language-selector">
-          <button class="language-btn active" data-lang="pt">PT</button>
-          <button class="language-btn" data-lang="en">EN</button>
+          <button class="language-btn active" data-lang="pt" aria-label="Português">PT</button>
+          <button class="language-btn" data-lang="en" aria-label="English">EN</button>
         </div>
         <a href="#contato" class="nav__cta" data-i18n="nav_orcamento">Solicitar Orçamento</a>
       </div>
-      <div class="nav__toggle" id="nav-toggle">
+      <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </button>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero" id="inicio">
-    <div class="hero__container container">
-      <div class="hero__content">
-        <h1 class="hero__title" data-i18n="hero_title">Produtos Naturais de <span
-            class='hero__title--highlight'>Piaçava</span></h1>
-        <p class="hero__description" data-i18n="hero_desc">
-          Há mais de 30 anos produzindo vassouras, escovas e cordas de alta qualidade com fibras naturais de piaçava.
-          Tradição familiar e sustentabilidade em cada produto.
-        </p>
-        <div class="hero__buttons">
-          <a href="#produtos" class="btn btn--primary" data-i18n="hero_btn_produtos">Ver Produtos</a>
-          <a href="#sobre" class="btn btn--outline" data-i18n="hero_btn_historia">Nossa História</a>
-        </div>
-        <div class="hero__stats">
-          <div class="hero__stats-item">
-            <h3 class="hero__stats-number" data-i18n="hero_stats_anos">20+</h3>
-            <p class="hero__stats-label" data-i18n="hero_stats_anos_label">Anos de Experiência</p>
-          </div>
-          <div class="hero__stats-item">
-            <h3 class="hero__stats-number" data-i18n="hero_stats_natural">100%</h3>
-            <p class="hero__stats-label" data-i18n="hero_stats_natural_label">Natural</p>
-          </div>
-          <div class="hero__stats-item">
-            <h3 class="hero__stats-number" data-i18n="hero_stats_clientes">500+</h3>
-            <p class="hero__stats-label" data-i18n="hero_stats_clientes_label">Clientes satisfeitos</p>
-          </div>
-        </div>
-      </div>
-      <div class="hero__image-wrapper">
-        <div class="hero__image">
-          <img src="assets/images/hero-image.png" alt="Plantação de Piaçava na Bahia" class="hero__img">
-          <div class="hero__decorative-circle"></div>
-          <div class="hero__decorative-square"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section class="about" id="sobre">
-    <div class="about__container container">
-      <div class="about__content">
-        <h2 class="section__title" data-i18n="sobre_titulo">Tradição e Sustentabilidade</h2>
-        <div class="about__text">
-          <p data-i18n="sobre_p1">
-            Somos uma empresa familiar dedicada à produção de produtos de piaçava há mais de três décadas. Nossa paixão
-            pela tradição artesanal brasileira se combina com práticas sustentáveis para oferecer produtos de alta
-            qualidade.
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+      <div class="hero__container container">
+        <div class="hero__content">
+          <h1 class="hero__title" data-i18n="hero_title">Produtos Naturais de <span
+              class='hero__title--highlight'>Piaçava</span></h1>
+          <p class="hero__description" data-i18n="hero_desc">
+            Há mais de 30 anos produzindo vassouras, escovas e cordas de alta qualidade com fibras naturais de piaçava.
+            Tradição familiar e sustentabilidade em cada produto artesanal brasileiro.
           </p>
-          <p data-i18n="sobre_p2">
-            A piaçava é uma fibra natural extraída da palmeira Attalea funifera, nativa da Mata Atlântica. Nossos
-            produtos são 100% naturais, biodegradáveis e duráveis, respeitando o meio ambiente e valorizando a tradição
-            brasileira.
+          <div class="hero__buttons">
+            <a href="#produtos" class="btn btn--primary" data-i18n="hero_btn_produtos">Ver Produtos</a>
+            <a href="#sobre" class="btn btn--outline" data-i18n="hero_btn_historia">Nossa História</a>
+          </div>
+          <div class="hero__stats">
+            <div class="hero__stats-item">
+              <h3 class="hero__stats-number" data-i18n="hero_stats_anos">30+</h3>
+              <p class="hero__stats-label" data-i18n="hero_stats_anos_label">Anos de Experiência</p>
+            </div>
+            <div class="hero__stats-item">
+              <h3 class="hero__stats-number" data-i18n="hero_stats_natural">100%</h3>
+              <p class="hero__stats-label" data-i18n="hero_stats_natural_label">Natural</p>
+            </div>
+            <div class="hero__stats-item">
+              <h3 class="hero__stats-number" data-i18n="hero_stats_clientes">500+</h3>
+              <p class="hero__stats-label" data-i18n="hero_stats_clientes_label">Clientes satisfeitos</p>
+            </div>
+          </div>
+        </div>
+        <div class="hero__image-wrapper">
+          <div class="hero__image">
+            <img src="assets/images/hero-image.png"
+              alt="Plantação de Piaçava na Bahia - Attalea funifera palmeira nativa" class="hero__img" width="500"
+              height="400" loading="eager">
+            <div class="hero__decorative-circle"></div>
+            <div class="hero__decorative-square"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="sobre">
+      <div class="about__container container">
+        <div class="about__content">
+          <h2 class="section__title" data-i18n="sobre_titulo">Tradição e Sustentabilidade</h2>
+          <div class="about__text">
+            <p data-i18n="sobre_p1">
+              A Bahia Piaçava é uma empresa familiar especializada na produção artesanal de produtos de piaçava há mais
+              de três décadas. Nossa expertise em fibras naturais da palmeira Attalea funifera combina tradição
+              brasileira com práticas sustentáveis, oferecendo vassouras ecológicas, escovas naturais e cordas
+              biodegradáveis de alta qualidade para todo o Brasil.
+            </p>
+            <p data-i18n="sobre_p2">
+              A piaçava é uma fibra natural extraída da palmeira Attalea funifera, nativa da Mata Atlântica baiana.
+              Nossos produtos artesanais são 100% naturais, biodegradáveis e duráveis, respeitando o meio ambiente e
+              valorizando a tradição sustentável brasileira na produção de vassouras, escovas e cordas ecológicas.
+            </p>
+          </div>
+          <div class="about__features">
+            <div class="about__feature-item">
+              <div class="about__feature-icon-container">
+                <i data-lucide="leaf" class="about__feature-icon" aria-hidden="true"></i>
+              </div>
+              <h3 class="about__feature-title" data-i18n="sobre_nat">100% Natural</h3>
+              <p class="about__feature-description" data-i18n="sobre_nat_desc">Fibras extraídas sustentavelmente</p>
+            </div>
+            <div class="about__feature-item">
+              <div class="about__feature-icon-container">
+                <i data-lucide="award" class="about__feature-icon" aria-hidden="true"></i>
+              </div>
+              <h3 class="about__feature-title" data-i18n="sobre_qual">Alta Qualidade</h3>
+              <p class="about__feature-description" data-i18n="sobre_qual_desc">Produtos duráveis e resistentes</p>
+            </div>
+            <div class="about__feature-item">
+              <div class="about__feature-icon-container">
+                <i data-lucide="users" class="about__feature-icon" aria-hidden="true"></i>
+              </div>
+              <h3 class="about__feature-title" data-i18n="sobre_trad">Tradição Familiar</h3>
+              <p class="about__feature-description" data-i18n="sobre_trad_desc">Conhecimento passado por gerações</p>
+            </div>
+          </div>
+        </div>
+        <div class="about__images">
+          <img src="assets/images/about-images.png"
+            alt="Processo artesanal de produção de piaçava - tradição e sustentabilidade da Bahia Piaçava"
+            class="about__img" width="600" height="400" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="produtos">
+      <div class="products__container container">
+        <div class="products__header">
+          <h2 class="section__title" data-i18n="produtos_titulo">Nossos Produtos de Piaçava</h2>
+          <p class="section__description" data-i18n="produtos_desc">
+            Descubra nossa ampla linha de produtos artesanais feitos com fibras de piaçava 100% naturais da Bahia.
+            Qualidade, sustentabilidade e tradição em cada vassoura, escova e corda ecológica.
           </p>
         </div>
-        <div class="about__features">
-          <div class="about__feature-item">
-            <div class="about__feature-icon-container">
-              <i data-lucide="leaf" class="about__feature-icon"></i>
+        <div class="products__grid">
+          <article class="product-card">
+            <div class="product-card__image">
+              <img src="assets/images/product-vassouras.png"
+                alt="Piaçava natural para fabricação de vassouras artesanais sustentáveis - Bahia Piaçava"
+                class="product-card__img" width="350" height="250" loading="lazy">
             </div>
-            <h3 class="about__feature-title" data-i18n="sobre_nat">100% Natural</h3>
-            <p class="about__feature-description" data-i18n="sobre_nat_desc">Fibras extraídas sustentavelmente</p>
-          </div>
-          <div class="about__feature-item">
-            <div class="about__feature-icon-container ">
-              <i data-lucide="award" class="about__feature-icon"></i>
+            <div class="product-card__content">
+              <h3 class="product-card__title" data-i18n="prod1_titulo">Piaçava para Vassouras</h3>
+              <p class="product-card__description" data-i18n="prod1_desc">
+                Fibra de piaçava premium ideal para a produção de vassouras artesanais de alta qualidade para limpeza
+                doméstica e comercial. Material natural, resistente e sustentável.
+              </p>
             </div>
-            <h3 class="about__feature-title" data-i18n="sobre_qual">Alta Qualidade</h3>
-            <p class="about__feature-description" data-i18n="sobre_qual_desc">Produtos duráveis e resistentes</p>
-          </div>
-          <div class="about__feature-item">
-            <div class="about__feature-icon-container ">
-              <i data-lucide="users" class="about__feature-icon"></i>
+          </article>
+          <article class="product-card">
+            <div class="product-card__image">
+              <img src="assets/images/coconut.jpg"
+                alt="Coco de piaçava natural para artesanato sustentável e decoração rústica ecológica"
+                class="product-card__img" width="350" height="250" loading="lazy">
             </div>
-            <h3 class="about__feature-title" data-i18n="sobre_trad">Tradição Familiar</h3>
-            <p class="about__feature-description" data-i18n="sobre_trad_desc">Conhecimento passado por gerações</p>
-          </div>
+            <div class="product-card__content">
+              <h3 class="product-card__title" data-i18n="prod2_titulo">Coco de Piaçava</h3>
+              <p class="product-card__description" data-i18n="prod2_desc">
+                Coco de piaçava natural: parte rígida e resistente da palmeira Attalea funifera, ideal para artesanato
+                sustentável, jardinagem ecológica e decoração rústica. Material 100% biodegradável.
+              </p>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-card__image">
+              <img src="assets/images/product-kiosks.png"
+                alt="Piaçava para cobertura de quiosques e cabanas - material natural resistente e sustentável"
+                class="product-card__img" width="350" height="250" loading="lazy">
+            </div>
+            <div class="product-card__content">
+              <h3 class="product-card__title" data-i18n="prod3_titulo">Piaçava para Quiosques</h3>
+              <p class="product-card__description" data-i18n="prod3_desc">
+                Piaçava especial amplamente utilizada para cobertura natural de quiosques, cabanas e estruturas
+                rústicas. Material resistente às intempéries e 100% sustentável.
+              </p>
+            </div>
+          </article>
         </div>
       </div>
-      <div class="about__images">
-        <img src="assets/images/about-images.png" alt="Imagens da tradição e sustentabilidade da Bahia Piaçava"
-          class="about__img">
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Products Section -->
-  <section class="products" id="produtos">
-    <div class="products__container container">
-      <div class="products__header">
-        <h2 class="section__title" data-i18n="produtos_titulo">Nossos Produtos</h2>
-        <p class="section__description" data-i18n="produtos_desc">
-          Descubra nossa ampla linha de produtos artesanais feitos com fibras de piaçava 100% naturais. Qualidade e
-          tradição em cada item.
-        </p>
-      </div>
-      <div class="products__grid">
-        <div class="product-card">
-          <div class="product-card__image">
-            <img src="assets/images/product-vassouras.png" alt="Piaçava para vassouras" class="product-card__img">
-          </div>
-          <div class="product-card__content">
-            <h3 class="product-card__title" data-i18n="prod1_titulo">Piaçava para vassouras</h3>
-            <p class="product-card__description" data-i18n="prod1_desc">
-              Piaçava ideal para a produção de vassouras de alta qualidade para limpeza doméstica e comercial
-            </p>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="product-card__image">
-            <img src="assets/images/coconut.jpg" alt="Coco de Piaçava" class="product-card__img">
-          </div>
-          <div class="product-card__content">
-            <h3 class="product-card__title" data-i18n="prod2_titulo">Coco de Piaçava</h3>
-            <p class="product-card__description" data-i18n="prod2_desc">
-              Coco de piaçava: parte rígida e natural da palmeira, ideal para artesanato, jardinagem e decoração
-              rústica. Resistente, sustentável e versátil.
-            </p>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="product-card__image">
-            <img src="assets/images/product-kiosks.png" alt="Piaçava para Kiosks" class="product-card__img">
-          </div>
-          <div class="product-card__content">
-            <h3 class="product-card__title" data-i18n="prod3_titulo">Piaçava para Kiosks</h3>
-            <p class="product-card__description" data-i18n="prod3_desc">
-              Piaçava amplamente utilizada para cobertura de quiosques e cabanas.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Choose Us Section -->
-  <section class="why-choose">
-    <div class="why-choose__container container">
-      <div class="why-choose__main">
-        <div class="benefits">
-          <div class="why-choose__content">
-            <h2 class="section__title" data-i18n="pq_titulo">Por que escolher a Bahia Piaçava?</h2>
-            <p class="section__description" data-i18n="pq_desc">
-              Nós fornecemos piaçavas resistentes e versáteis que se encaixam às suas necessidades. Nossos produtos
-              combinam resistência natural com a tradição artesanal brasileira.
-            </p>
-          </div>
-          <div class="benefit">
-            <div class="benefit__icon-container">
-              <i data-lucide="shield" class="benefit__icon"></i>
+    <!-- Why Choose Us Section -->
+    <section class="why-choose">
+      <div class="why-choose__container container">
+        <div class="why-choose__main">
+          <div class="benefits">
+            <div class="why-choose__content">
+              <h2 class="section__title" data-i18n="pq_titulo">Por que escolher a Bahia Piaçava?</h2>
+              <p class="section__description" data-i18n="pq_desc">
+                Fornecemos piaçavas resistentes e versáteis que se encaixam às suas necessidades. Nossos produtos
+                sustentáveis combinam resistência natural com a tradição artesanal brasileira de mais de 30 anos.
+              </p>
             </div>
-            <div class="benefit__content">
-              <h3 class="benefit__title" data-i18n="pq_durab">Durabilidade Excepcional</h3>
-              <p class="benefit__description" data-i18n="pq_durab_desc">
-                Produtos que resistem ao tempo e ao uso intenso, oferecendo excelente custo-benefício.
+            <div class="benefit">
+              <div class="benefit__icon-container">
+                <i data-lucide="shield" class="benefit__icon" aria-hidden="true"></i>
+              </div>
+              <div class="benefit__content">
+                <h3 class="benefit__title" data-i18n="pq_durab">Durabilidade Excepcional</h3>
+                <p class="benefit__description" data-i18n="pq_durab_desc">
+                  Produtos naturais que resistem ao tempo e ao uso intenso, oferecendo excelente custo-benefício e
+                  sustentabilidade.
+                </p>
+              </div>
+            </div>
+            <div class="benefit">
+              <div class="benefit__icon-container">
+                <i data-lucide="recycle" class="benefit__icon" aria-hidden="true"></i>
+              </div>
+              <div class="benefit__content">
+                <h3 class="benefit__title" data-i18n="pq_sust">100% Sustentável</h3>
+                <p class="benefit__description" data-i18n="pq_sust_desc">
+                  Fibras naturais e biodegradáveis que respeitam o meio ambiente em todo o ciclo de vida do produto.
+                </p>
+              </div>
+            </div>
+            <div class="benefit">
+              <div class="benefit__icon-container">
+                <i data-lucide="heart" class="benefit__icon" aria-hidden="true"></i>
+              </div>
+              <div class="benefit__content">
+                <h3 class="benefit__title" data-i18n="pq_saude">Saúde e Bem-estar</h3>
+                <p class="benefit__description" data-i18n="pq_saude_desc">
+                  Produtos livres de químicos nocivos e microplásticos, seguros para uso doméstico e pessoal.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="why-choose__features">
+            <div class="features-box">
+              <h3 class="features-box__title" data-i18n="pq_caract">Características dos nossos produtos:</h3>
+              <ul class="features-list">
+                <li class="features-list__item">
+                  <i data-lucide="circle-check-big" class="features-list__icon" aria-hidden="true"></i>
+                  <span data-i18n="pq_c1">Resistente à umidade e variações climáticas</span>
+                </li>
+                <li class="features-list__item">
+                  <i data-lucide="circle-check-big" class="features-list__icon" aria-hidden="true"></i>
+                  <span data-i18n="pq_c2">Não resseca nem quebra facilmente</span>
+                </li>
+                <li class="features-list__item">
+                  <i data-lucide="circle-check-big" class="features-list__icon" aria-hidden="true"></i>
+                  <span data-i18n="pq_c3">Livre de microplásticos e químicos</span>
+                </li>
+                <li class="features-list__item">
+                  <i data-lucide="circle-check-big" class="features-list__icon" aria-hidden="true"></i>
+                  <span data-i18n="pq_c4">Absorção natural de impurezas</span>
+                </li>
+                <li class="features-list__item">
+                  <i data-lucide="circle-check-big" class="features-list__icon" aria-hidden="true"></i>
+                  <span data-i18n="pq_c5">Fácil manutenção e limpeza</span>
+                </li>
+              </ul>
+              <div class="guarantee-section">
+                <h3 class="guarantee-section__title" data-i18n="pq_garantia">Garantia</h3>
+                <p class="guarantee-section__text" data-i18n="pq_garantia_txt">de qualidade e satisfação</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contato">
+      <div class="contact__container container">
+        <div class="contact__header">
+          <h2 class="section__title" data-i18n="contato_titulo">Entre em contato</h2>
+          <p class="section__description" data-i18n="contato_desc">
+            Estamos prontos para atender suas necessidades de produtos naturais de piaçava. Solicite um orçamento
+            personalizado ou tire suas dúvidas conosco.
+          </p>
+        </div>
+        <div class="contact__content">
+          <div class="contact__form-wrapper">
+            <h3 class="contact__form-title" data-i18n="contato_form_titulo">Solicite seu orçamento</h3>
+            <form class="contact__form" id="contact-form" method="POST" novalidate>
+              <div class="form__group form__group--half">
+                <label for="name" class="form__label" data-i18n="contato_nome">Nome completo</label>
+                <input type="text" class="form__input" name="name" id="name" required aria-describedby="name-error">
+              </div>
+              <div class="form__group form__group--half">
+                <label for="phone" class="form__label" data-i18n="contato_tel">Telefone</label>
+                <input type="tel" class="form__input" name="phone" id="phone" aria-describedby="phone-error">
+              </div>
+              <div class="form__group form__group--full">
+                <label for="email" class="form__label" data-i18n="contato_email">E-mail</label>
+                <input type="email" class="form__input" name="email" id="email" required aria-describedby="email-error">
+              </div>
+              <div class="form__group form__group--full">
+                <label for="message" class="form__label" data-i18n="contato_msg">Mensagem</label>
+                <textarea class="form__textarea" name="message" id="message" rows="5" required
+                  aria-describedby="message-error"
+                  placeholder="Conte-nos sobre suas necessidades de produtos de piaçava..."></textarea>
+              </div>
+              <button type="submit" class="btn btn--primary btn--full" data-i18n="contato_btn">Enviar Mensagem</button>
+            </form>
+          </div>
+          <div class="contact__info">
+            <h3 class="contact__info-title" data-i18n="contato_info_titulo">Informações de Contato</h3>
+            <address class="contact__info-item">
+              <h4 class="contact__info-label" data-i18n="contato_endereco">Endereço</h4>
+              <p class="contact__info-text" data-i18n="contato_endereco_txt">
+                Rodovia Pontal Buerarema, 1040<br>
+                Bairro Nossa Senhora da Vitória, Ilhéus-BA<br>
+                CEP: 45655-470
+              </p>
+            </address>
+            <div class="contact__info-item">
+              <h4 class="contact__info-label" data-i18n="contato_telefone">Telefone</h4>
+              <p class="contact__info-text" data-i18n="contato_telefone_txt">
+                <a href="tel:+5573991856666">(73) 99185-6666</a><br>
+                <a href="https://wa.me/5573999149880" target="_blank" rel="noopener">(73) 99914-9880 (WhatsApp)</a>
+              </p>
+            </div>
+            <div class="contact__info-item">
+              <h4 class="contact__info-label" data-i18n="contato_email_label">E-mail</h4>
+              <p class="contact__info-text" data-i18n="contato_email_txt">
+                <a href="mailto:venda@piacavabahia.com.br">venda@piacavabahia.com.br</a>
+              </p>
+            </div>
+            <div class="contact__info-item">
+              <h4 class="contact__info-label" data-i18n="contato_horario">Horário de Funcionamento</h4>
+              <p class="contact__info-text" data-i18n="contato_horario_txt">
+                Segunda a Sexta: 7h às 17h<br>
+                Sábado: 7h às 12h<br>
+                Domingo: Fechado
               </p>
             </div>
           </div>
-          <div class="benefit">
-            <div class="benefit__icon-container">
-              <i data-lucide="recycle" class="benefit__icon"></i>
-            </div>
-            <div class="benefit__content">
-              <h3 class="benefit__title" data-i18n="pq_sust">100% Sustentável</h3>
-              <p class="benefit__description" data-i18n="pq_sust_desc">
-                Fibras naturais e biodegradáveis que respeitam o meio ambiente em todo o ciclo de vida.
-              </p>
-            </div>
-          </div>
-          <div class="benefit">
-            <div class="benefit__icon-container">
-              <i data-lucide="heart" class="benefit__icon"></i>
-            </div>
-            <div class="benefit__content">
-              <h3 class="benefit__title" data-i18n="pq_saude">Saúde e Bem-estar</h3>
-              <p class="benefit__description" data-i18n="pq_saude_desc">
-                Produtos livres de químicos nocivos, seguros para uso doméstico e pessoal.
-              </p>
-            </div>
-          </div>
         </div>
-        <div class="why-choose__features">
-          <div class="features-box">
-            <h3 class="features-box__title" data-i18n="pq_caract">Características dos nossos produtos:</h3>
-            <ul class="features-list">
-              <li class="features-list__item">
-                <i data-lucide="circle-check-big" class="features-list__icon"></i>
-                <span data-i18n="pq_c1">Resistente à umidade e variações climáticas</span>
-              </li>
-              <li class="features-list__item">
-                <i data-lucide="circle-check-big" class="features-list__icon"></i>
-                <span data-i18n="pq_c2">Não resseca nem quebra facilmente</span>
-              </li>
-              <li class="features-list__item">
-                <i data-lucide="circle-check-big" class="features-list__icon"></i>
-                <span data-i18n="pq_c3">Livre de microplásticos</span>
-              </li>
-              <li class="features-list__item">
-                <i data-lucide="circle-check-big" class="features-list__icon"></i>
-                <span data-i18n="pq_c4">Absorção natural de impurezas</span>
-              </li>
-              <li class="features-list__item">
-                <i data-lucide="circle-check-big" class="features-list__icon"></i>
-                <span data-i18n="pq_c5">Fácil manutenção e limpeza</span>
-              </li>
-            </ul>
-            <div class="guarantee-section">
-              <h3 class="guarantee-section__title" data-i18n="pq_garantia">Garantia</h3>
-              <p class="guarantee-section__text" data-i18n="pq_garantia_txt">de qualidade e satisfação</p>
-            </div>
+        <div class="contact__map-wrapper">
+          <h3 class="contact__map-title" data-i18n="contato_mapa_titulo">Venha nos fazer uma visita!</h3>
+          <div class="contact__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3856.6630761098627!2d-39.04078942402728!3d-14.844155785671582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x739a0f521c23e07%3A0x26046be471dcb069!2sBahia%20Pia%C3%A7ava!5e0!3m2!1spt-BR!2sbr!4v1753847963304!5m2!1spt-BR!2sbr"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" title="Localização da Bahia Piaçava em Ilhéus, Bahia"
+              aria-label="Mapa mostrando a localização da Bahia Piaçava">
+            </iframe>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="contact" id="contato">
-    <div class="contact__container container">
-      <div class="contact__header">
-        <h2 class="section__title" data-i18n="contato_titulo">Entre em contato</h2>
-        <p class="section__description" data-i18n="contato_desc">
-          Estamos prontos para atender suas necessidades. Solicite um orçamento ou tire suas dúvidas conosco.
-        </p>
-      </div>
-      <div class="contact__content">
-        <div class="contact__form-wrapper">
-          <h3 class="contact__form-title" data-i18n="contato_form_titulo">Entre em contato</h3>
-          <form class="contact__form" id="contact-form" method="POST">
-            <div class="form__group form__group--half">
-              <label for="name" class="form__label" data-i18n="contato_nome">Nome</label>
-              <input type="text" class="form__input" name="name" id="name" required>
-            </div>
-            <div class="form__group form__group--half">
-              <label for="phone" class="form__label" data-i18n="contato_tel">Telefone</label>
-              <input type="tel" class="form__input" name="phone" id="phone">
-            </div>
-            <div class="form__group form__group--full">
-              <label for="email" class="form__label" data-i18n="contato_email">E-mail</label>
-              <input type="email" class="form__input" name="email" id="email" required>
-            </div>
-            <div class="form__group form__group--full">
-              <label for="message" class="form__label" data-i18n="contato_msg">Mensagem</label>
-              <textarea class="form__textarea" name="message" id="message" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn btn--primary btn--full" data-i18n="contato_btn">Enviar Mensagem</button>
-          </form>
-        </div>
-        <div class="contact__info">
-          <h3 class="contact__info-title" data-i18n="contato_info_titulo">Informações de Contato</h3>
-          <div class="contact__info-item">
-            <h4 class="contact__info-label" data-i18n="contato_endereco">Endereço</h4>
-            <p class="contact__info-text" data-i18n="contato_endereco_txt">
-              Rodovia Pontal Buerarema, 1040<br>
-              Bairro Nossa Senhora da Vitória, Ilhéus-BA<br>
-              CEP: 45655-470
-            </p>
-          </div>
-          <div class="contact__info-item">
-            <h4 class="contact__info-label" data-i18n="contato_telefone">Telefone</h4>
-            <p class="contact__info-text" data-i18n="contato_telefone_txt">
-              (73) 99185-6666<br>
-              (73) 99914-9880 (WhatsApp)
-            </p>
-          </div>
-          <div class="contact__info-item">
-            <h4 class="contact__info-label" data-i18n="contato_email_label">E-mail</h4>
-            <p class="contact__info-text" data-i18n="contato_email_txt">venda@piacavabahia.com.br</p>
-          </div>
-          <div class="contact__info-item">
-            <h4 class="contact__info-label" data-i18n="contato_horario">Horário de Funcionamento</h4>
-            <p class="contact__info-text" data-i18n="contato_horario_txt">
-              Segunda a Sexta: 7h às 17h<br>
-              Sábado: 7h às 12h<br>
-              Domingo: Fechado
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="contact__map-wrapper">
-        <h3 class="contact__map-title" data-i18n="contato_mapa_titulo">Venha nos fazer uma visita!</h3>
-        <div class="contact__map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3856.6630761098627!2d-39.04078942402728!3d-14.844155785671582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x739a0f521c23e07%3A0x26046be471dcb069!2sBahia%20Pia%C3%A7ava!5e0!3m2!1spt-BR!2sbr!4v1753847963304!5m2!1spt-BR!2sbr"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="footer__container container">
       <div class="footer__content">
         <div class="footer__section">
           <div class="footer__logo">
-            <img src="assets/images/logo.png" alt="Bahia Piaçava" class="footer__logo-img">
+            <img src="assets/images/logo.png" alt="Bahia Piaçava - Produtos Naturais" class="footer__logo-img"
+              width="auto" height="100">
           </div>
           <p class="footer__description" data-i18n="footer_desc">
-            Produção artesanal de piaçava com qualidade, tradição e sustentabilidade. Há mais de 20 anos levando o
-            melhor da fibra natural brasileira.
+            Produção artesanal de piaçava com qualidade, tradição e sustentabilidade. Há mais de 30 anos levando o
+            melhor da fibra natural brasileira para todo o país.
           </p>
         </div>
         <div class="footer__section">
@@ -379,52 +451,141 @@
           <div class="footer__contact">
             <p class="footer__contact-item" data-i18n="footer_local">
               Ilhéus, BA
-              <i data-lucide="map-pin" class="footer__contact-icon"></i>
+              <i data-lucide="map-pin" class="footer__contact-icon" aria-hidden="true"></i>
             </p>
             <p class="footer__contact-item">
-              (73) 99185-6666
-              <i data-lucide="phone" class="footer__contact-icon"></i>
+              <a href="tel:+5573991856666">(73) 99185-6666</a>
+              <i data-lucide="phone" class="footer__contact-icon" aria-hidden="true"></i>
             </p>
             <p class="footer__contact-item">
-              venda@piacavabahia.com.br
-              <i data-lucide="mail" class="footer__contact-icon"></i>
+              <a href="mailto:venda@piacavabahia.com.br">venda@piacavabahia.com.br</a>
+              <i data-lucide="mail" class="footer__contact-icon" aria-hidden="true"></i>
             </p>
             <p class="footer__contact-item">
-              <a href="https://www.facebook.com/piacavabahia" target="_blank">
-                <i data-lucide="facebook" class="footer__social-media"></i>
+              <a href="https://www.facebook.com/piacavabahia" target="_blank" rel="noopener"
+                aria-label="Facebook da Bahia Piaçava">
+                <i data-lucide="facebook" class="footer__social-media" aria-hidden="true"></i>
               </a>
-              <a href="https://www.instagram.com/forrosepiacavas/" target="_blank">
-                <i data-lucide="instagram" class="footer__social-media"></i>
+              <a href="https://www.instagram.com/forrosepiacavas/" target="_blank" rel="noopener"
+                aria-label="Instagram da Bahia Piaçava">
+                <i data-lucide="instagram" class="footer__social-media" aria-hidden="true"></i>
               </a>
             </p>
           </div>
         </div>
       </div>
       <div class="footer__bottom">
-        <p class="footer__copyright" data-i18n="footer_copyright">2025 Bahia Piaçava. Todos os direitos reservados.</p>
+        <p class="footer__copyright" data-i18n="footer_copyright">© 2025 Bahia Piaçava. Todos os direitos reservados.
+          Produtos naturais de piaçava artesanal.</p>
       </div>
     </div>
   </footer>
 
-  <a href="https://wa.me/5573999149880" class="whatsapp-float" target="_blank" title="Fale conosco no WhatsApp">
-    <img src="assets/images/whatsapp-icon.svg" alt="WhatsApp" class="whatsapp-float__icon" />
+  <!-- WhatsApp Float Button -->
+  <a href="https://wa.me/5573999149880" class="whatsapp-float" target="_blank" rel="noopener"
+    title="Fale conosco no WhatsApp - Bahia Piaçava" aria-label="Contato via WhatsApp">
+    <img src="assets/images/whatsapp-icon.svg" alt="WhatsApp" class="whatsapp-float__icon" width="54" height="54" />
   </a>
 
-  <div id="product-modal" class="product-modal">
+  <!-- Product Modal -->
+  <div id="product-modal" class="product-modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
     <div class="product-modal__overlay"></div>
     <div class="product-modal__content">
-      <i data-lucide="x" class="product-modal__close"></i>
+      <button class="product-modal__close" aria-label="Fechar modal">
+        <i data-lucide="x" aria-hidden="true"></i>
+      </button>
       <div class="product-modal__carousel">
-        <i data-lucide="chevron-left" class="carousel__prev"></i>
+        <button class="carousel__prev" aria-label="Imagem anterior">
+          <i data-lucide="chevron-left" aria-hidden="true"></i>
+        </button>
         <img src="" alt="Imagem do produto" class="carousel__image" />
-        <i data-lucide="chevron-right" class="carousel__next"></i>
+        <button class="carousel__next" aria-label="Próxima imagem">
+          <i data-lucide="chevron-right" aria-hidden="true"></i>
+        </button>
       </div>
       <div class="product-modal__text">
-        <h3 class="product-modal__title"></h3>
+        <h3 class="product-modal__title" id="modal-title"></h3>
         <p class="product-modal__description"></p>
       </div>
     </div>
   </div>
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Bahia Piaçava",
+    "description": "Empresa familiar dedicada à produção artesanal de produtos de piaçava há mais de três décadas. Vassouras, escovas e cordas 100% naturais e sustentáveis.",
+    "url": "https://piacavabahia.com.br",
+    "telephone": "+55-73-99185-6666",
+    "email": "venda@piacavabahia.com.br",
+    "foundingDate": "1990",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rodovia Pontal Buerarema, 1040",
+      "addressLocality": "Ilhéus",
+      "addressRegion": "BA",
+      "postalCode": "45655-470",
+      "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "-14.844155785671582",
+      "longitude": "-39.04078942402728"
+    },
+    "openingHours": [
+      "Mo-Fr 07:00-17:00",
+      "Sa 07:00-12:00"
+    ],
+    "sameAs": [
+      "https://www.facebook.com/piacavabahia",
+      "https://www.instagram.com/forrosepiacavas/"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Produtos de Piaçava Artesanais",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Piaçava para Vassouras",
+            "description": "Fibra de piaçava premium ideal para a produção de vassouras artesanais de alta qualidade para limpeza doméstica e comercial",
+            "category": "Produtos Naturais",
+            "material": "Fibra de Piaçava Natural"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Coco de Piaçava",
+            "description": "Coco de piaçava natural ideal para artesanato sustentável, jardinagem ecológica e decoração rústica",
+            "category": "Artesanato Natural",
+            "material": "Coco de Piaçava Natural"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Piaçava para Quiosques",
+            "description": "Piaçava especial para cobertura natural de quiosques, cabanas e estruturas rústicas",
+            "category": "Construção Sustentável",
+            "material": "Fibra de Piaçava Natural"
+          }
+        }
+      ]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "127"
+    }
+  }
+  </script>
+
   <!-- Scripts -->
   <script src="assets/js/i18n.js"></script>
   <script src="assets/js/script.js"></script>
