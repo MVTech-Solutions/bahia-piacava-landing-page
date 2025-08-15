@@ -195,10 +195,24 @@ function setLanguage(lang) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Detecta o parâmetro 'language' na URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const langFromUrl = urlParams.get('language');
+
+  // Define o idioma com base no parâmetro ou usa o padrão 'pt'
+  const initialLang = langFromUrl || 'pt';
+  setLanguage(initialLang);
+
+  // Adiciona eventos de clique nos botões de idioma
   document.querySelectorAll('.language-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      setLanguage(btn.getAttribute('data-lang'));
+      const selectedLang = btn.getAttribute('data-lang');
+      setLanguage(selectedLang);
+
+      // Atualiza o parâmetro 'language' na URL
+      const url = new URL(window.location.href);
+      url.searchParams.set('language', selectedLang);
+      window.history.replaceState({}, '', url);
     });
   });
-  setLanguage(currentLang);
 });
