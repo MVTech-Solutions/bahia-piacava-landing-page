@@ -8,6 +8,25 @@ document.addEventListener('DOMContentLoaded', function () {
   const header = document.querySelector('.header');
   const languageButtons = document.querySelectorAll('.language-btn');
 
+  function applyLanguage(language) {
+    // Atualiza o botão ativo
+    languageButtons.forEach(button => {
+      if (button.getAttribute('data-lang') === language) {
+        button.classList.add('active');
+      } else {
+        button.classList.remove('active');
+      }
+    });
+
+    // Aqui você pode adicionar lógica para alterar o conteúdo da página
+    console.log(`Idioma aplicado: ${language}`);
+  }
+
+  // Verifica o parâmetro de idioma na URL ao carregar a página
+  const urlParams = new URLSearchParams(window.location.search);
+  const currentLanguage = urlParams.get('language') || 'pt'; // Padrão: português
+  applyLanguage(currentLanguage);
+
   languageButtons.forEach(button => {
     button.addEventListener('click', function () {
       const selectedLanguage = button.getAttribute('data-lang');
