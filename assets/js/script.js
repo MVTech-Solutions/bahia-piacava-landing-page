@@ -6,6 +6,25 @@ document.addEventListener('DOMContentLoaded', function () {
   const navMenu = document.getElementById('nav-menu');
   const navLinks = document.querySelectorAll('.nav__link');
   const header = document.querySelector('.header');
+  const languageButtons = document.querySelectorAll('.language-btn');
+
+  languageButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      const selectedLanguage = button.getAttribute('data-lang');
+      const url = new URL(window.location.href);
+      const params = new URLSearchParams(url.search);
+
+      // Atualiza o parâmetro de idioma
+      params.set('language', selectedLanguage);
+
+      // Atualiza a URL sem recarregar a página
+      url.search = params.toString();
+      window.history.replaceState({}, '', url);
+
+      // Opcional: Recarregar a página para aplicar o idioma
+      // window.location.reload();
+    });
+  });
 
   // Mobile menu toggle
   if (navToggle && navMenu) {

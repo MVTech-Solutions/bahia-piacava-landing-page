@@ -73,8 +73,8 @@
   <header class="header" role="banner">
     <nav class="nav container" role="navigation" aria-label="Navegação principal">
       <div class="nav__logo">
-        <img src="assets/images/logo.png" alt="Bahia Piaçava - Produtos Naturais de Piaçava" class="nav__logo-img"
-          width="auto" height="70">
+        <img src="assets/images/logo_piacava.avif" alt="Bahia Piaçava - Produtos Naturais de Piaçava"
+          class="nav__logo-img" width="auto" height="70">
       </div>
       <ul class="nav__menu" id="nav-menu">
         <li class="nav__item">
@@ -136,13 +136,15 @@
             </div>
           </div>
         </div>
-        <div class="hero__image-wrapper">
-          <div class="hero__image">
-            <img src="assets/images/hero-image.png"
-              alt="Plantação de Piaçava na Bahia - Attalea funifera palmeira nativa" class="hero__img" width="500"
-              height="400" loading="eager">
-            <div class="hero__decorative-circle"></div>
-            <div class="hero__decorative-square"></div>
+        <div style="display: flex; justify-content: center; width: 100%;">
+          <div class="hero__image-wrapper">
+            <div class="hero__image">
+              <img src="assets/images/bahia_piacava_local.jpeg"
+                alt="Plantação de Piaçava na Bahia - Attalea funifera palmeira nativa" class="hero__img" width="500"
+                height="400" loading="eager">
+              <div class="hero__decorative-circle"></div>
+              <div class="hero__decorative-square"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -210,13 +212,16 @@
         </div>
         <div class="products__grid">
           <article class="product-card">
+            <div class="product-card-icon-container">
+              <i data-lucide="images" class="product-card-icon" aria-hidden="true"></i>
+            </div>
             <div class="product-card__image">
               <img src="assets/images/product-vassouras.png"
                 alt="Piaçava natural para fabricação de vassouras artesanais sustentáveis - Bahia Piaçava"
                 class="product-card__img" width="350" height="250" loading="lazy">
             </div>
             <div class="product-card__content">
-              <h3 class="product-card__title" data-i18n="prod1_titulo">Piaçava para Vassouras</h3>
+              <h3 class="product-card__title" data-i18n="prod1_titulo">Piaçava beneficiada</h3>
               <p class="product-card__description" data-i18n="prod1_desc">
                 Fibra de piaçava premium ideal para a produção de vassouras artesanais de alta qualidade para limpeza
                 doméstica e comercial. Material natural, resistente e sustentável.
@@ -224,6 +229,9 @@
             </div>
           </article>
           <article class="product-card">
+            <div class="product-card-icon-container">
+              <i data-lucide="images" class="product-card-icon" aria-hidden="true"></i>
+            </div>
             <div class="product-card__image">
               <img src="assets/images/coconut.jpg"
                 alt="Coco de piaçava natural para artesanato sustentável e decoração rústica ecológica"
@@ -238,13 +246,16 @@
             </div>
           </article>
           <article class="product-card">
+            <div class="product-card-icon-container">
+              <i data-lucide="images" class="product-card-icon" aria-hidden="true"></i>
+            </div>
             <div class="product-card__image">
               <img src="assets/images/product-kiosks.png"
                 alt="Piaçava para cobertura de quiosques e cabanas - material natural resistente e sustentável"
                 class="product-card__img" width="350" height="250" loading="lazy">
             </div>
             <div class="product-card__content">
-              <h3 class="product-card__title" data-i18n="prod3_titulo">Piaçava para Quiosques</h3>
+              <h3 class="product-card__title" data-i18n="prod3_titulo">Piaçava para Coberturas</h3>
               <p class="product-card__description" data-i18n="prod3_desc">
                 Piaçava especial amplamente utilizada para cobertura natural de quiosques, cabanas e estruturas
                 rústicas. Material resistente às intempéries e 100% sustentável.
@@ -426,7 +437,7 @@
       <div class="footer__content">
         <div class="footer__section">
           <div class="footer__logo">
-            <img src="assets/images/logo.png" alt="Bahia Piaçava - Produtos Naturais" class="footer__logo-img"
+            <img src="assets/images/logo_piacava.avif" alt="Bahia Piaçava - Produtos Naturais" class="footer__logo-img"
               width="auto" height="100">
           </div>
           <p class="footer__description" data-i18n="footer_desc">
@@ -446,7 +457,7 @@
         <div class="footer__section">
           <h4 class="footer__title" data-i18n="footer_contato">Contato</h4>
           <div class="footer__contact">
-            <p class="footer__contact-item" data-i18n="footer_local">
+            <p class="footer__contact-item">
               Ilhéus, BA
               <i data-lucide="map-pin" class="footer__contact-icon" aria-hidden="true"></i>
             </p>
@@ -459,6 +470,10 @@
               <i data-lucide="mail" class="footer__contact-icon" aria-hidden="true"></i>
             </p>
             <p class="footer__contact-item">
+              <a>35.128.204/0001-97</a>
+              <i data-lucide="building-2" class="footer__contact-icon" aria-hidden="true"></i>
+            </p>
+            <p class="footer__contact-item-icons">
               <a href="https://www.facebook.com/piacavabahia" target="_blank" rel="noopener"
                 aria-label="Facebook da Bahia Piaçava">
                 <i data-lucide="facebook" class="footer__social-media" aria-hidden="true"></i>
