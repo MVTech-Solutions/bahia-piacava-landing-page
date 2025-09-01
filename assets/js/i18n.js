@@ -35,7 +35,7 @@ const translations = {
     prod2_titulo: "Coco de Piaçava",
     prod2_desc: "Coco de piaçava: parte rígida e natural da palmeira, ideal para artesanato, jardinagem e decoração rústica. Resistente, sustentável e versátil.",
     prod3_titulo: "Piaçava para Coberturas",
-    prod3_desc: "Piaçava amplamente utilizada para cobertura de quiosques e cabanas.",
+    prod3_desc: "Fibra de piaçava amplamente utilizada para coberturas de quiosques, telhados e áreas externas. Possui resistência a exposição de sol e chuva, além de fornecer isolamento térmico eficiente.",
 
     pq_titulo: "Por que escolher a Bahia Piaçava?",
     pq_desc: "Nós fornecemos piaçavas resistentes e versáteis que se encaixam às suas necessidades. Nossos produtos combinam resistência natural com a tradição artesanal brasileira.",
@@ -119,7 +119,7 @@ const translations = {
     prod2_titulo: "Piassava Coconut",
     prod2_desc: "Piassava coconut: rigid and natural part of the palm, ideal for crafts, gardening, and rustic decoration. Resistant, sustainable, and versatile.",
     prod3_titulo: "Piassava for Roofing",
-    prod3_desc: "Piassava widely used for covering kiosks and huts.",
+    prod3_desc: "Piaçava fiber is widely used for covering kiosks, roofs, and outdoor areas. It is resistant to sun and rain exposure and provides efficient thermal insulation.",
 
     pq_titulo: "Why choose Bahia Piassava?",
     pq_desc: "We provide resistant and versatile piassava that fits your needs. Our products combine natural strength with Brazilian craftsmanship tradition.",

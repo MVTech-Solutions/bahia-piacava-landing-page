@@ -90,6 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Defina as imagens de cada produto pelo índice (0, 1, 2)
   const productImages = [
     [
+      'assets/images/broom/broom-main.jpeg',
       'assets/images/broom/product-1.avif',
       'assets/images/broom/product-2.avif',
       'assets/images/broom/product-3.avif',
