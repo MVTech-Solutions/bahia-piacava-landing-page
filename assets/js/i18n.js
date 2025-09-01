@@ -30,7 +30,7 @@ const translations = {
 
     produtos_titulo: "Nossos Produtos",
     produtos_desc: "Descubra nossa ampla linha de produtos artesanais feitos com fibras de piaçava 100% naturais. Qualidade e tradição em cada item.",
-    prod1_titulo: "Piaçava beneficiada",
+    prod1_titulo: "Piaçava cortada e penteada",
     prod1_desc: "Piaçava ideal para a produção de vassouras de alta qualidade, para uso industrial e comercial. Material natural, resistente e sustentável.",
     prod2_titulo: "Coco de Piaçava",
     prod2_desc: "Coco de piaçava: parte rígida e natural da palmeira, ideal para artesanato, jardinagem e decoração rústica. Resistente, sustentável e versátil.",
@@ -73,7 +73,7 @@ const translations = {
     contato_horario_txt: "Segunda a Sexta: 7h às 17h<br>Sábado: 7h às 12h<br>Domingo: Fechado",
     contato_mapa_titulo: "Venha nos fazer uma visita!",
 
-    footer_desc: "Produção de piaçava beneficiada e fibra de piaçava (pentes de piaçava) com qualidade, tradição e sustentabilidade. Há mais de 20 anos fornecendo o melhor da  fibra natural brasileira.",
+    footer_desc: "Produção de piaçava cortada e penteada, fibra de piaçava (pentes de piaçava) com qualidade, tradição e sustentabilidade. Há mais de 20 anos fornecendo o melhor da  fibra natural brasileira.",
     footer_empresa: "Empresa",
     footer_hist: "Nossa História",
     footer_sust: "Sustentabilidade",
@@ -114,7 +114,7 @@ const translations = {
 
     produtos_titulo: "Our Products",
     produtos_desc: "Discover our wide range of handcrafted products made with 100% natural piassava fibers. Quality and tradition in every item.",
-    prod1_titulo: "Piassava for Brooms",
+    prod1_titulo: "Cut and combed piassava",
     prod1_desc: "Piassava fiber is ideal for producing high-quality brooms for industrial and commercial use. A natural, durable, and sustainable material.",
     prod2_titulo: "Piassava Coconut",
     prod2_desc: "Piassava coconut: rigid and natural part of the palm, ideal for crafts, gardening, and rustic decoration. Resistant, sustainable, and versatile.",

@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Defina as imagens de cada produto pelo índice (0, 1, 2)
   const productImages = [
     [
-      'assets/images/broom/product-1.avif',
+      'assets/images/broom/product-1.jpeg',
       'assets/images/broom/product-2.avif',
       'assets/images/broom/product-3.avif',
       'assets/images/broom/product-4.avif',
@@ -106,6 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'assets/images/coconut/product-4.avif',
     ],
     [
+      'assets/images/kiosk/kiosk-main.jpeg',
       'assets/images/kiosk/product-1.avif',
       'assets/images/kiosk/product-2.avif',
       'assets/images/kiosk/product-3.avif',
