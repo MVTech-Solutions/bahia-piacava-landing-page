@@ -306,7 +306,6 @@ textarea {
   left: 0;
   min-width: 260px;
   background: #fff;
-  border: 1px solid var(--border-light);
   border-radius: 10px;
   box-shadow: var(--shadow);
   padding: 0.4rem;
@@ -1367,9 +1366,36 @@ iframe {
     display: none;
   }
 
-  .nav__item-main {
+  .nav__item {
     width: 100%;
-    justify-content: space-between;
+    text-align: center;
+  }
+
+  .nav__item-main {
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .nav__item--dropdown .nav__link {
+    display: inline-block;
+  }
+
+  .nav__item--dropdown .nav__dropdown-toggle {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .nav__item--dropdown .nav__link::after {
+    display: none;
+  }
+
+  .nav__item--dropdown .nav__link:hover::after {
+    width: 0;
+    display: none;
   }
 
   .nav__dropdown-menu {
@@ -1378,7 +1404,6 @@ iframe {
     border-radius: 8px;
     box-shadow: none;
     background: #f8faf9;
-    border: 1px solid var(--border-light);
     max-height: 0;
     overflow: hidden;
     padding: 0;
