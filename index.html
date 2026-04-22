@@ -127,8 +127,18 @@
         <li class="nav__item">
           <a href="#sobre" class="nav__link" data-i18n="nav_sobre">Sobre</a>
         </li>
-        <li class="nav__item">
-          <a href="#produtos" class="nav__link" data-i18n="nav_produtos">Produtos</a>
+        <li class="nav__item nav__item--dropdown">
+          <div class="nav__item-main">
+            <a href="#produtos" class="nav__link" data-i18n="nav_produtos">Produtos</a>
+            <button class="nav__dropdown-toggle" type="button" aria-label="Abrir lista de produtos" aria-expanded="false">
+              <span aria-hidden="true">&#9662;</span>
+            </button>
+          </div>
+          <ul class="nav__dropdown-menu" aria-label="Lista de produtos">
+            <li><a class="nav__dropdown-link" href="product.html?product=0" data-i18n="nav_produto_1">Piaçava Cortada e Penteada</a></li>
+            <li><a class="nav__dropdown-link" href="product.html?product=1" data-i18n="nav_produto_2">Coco de Piaçava Natural</a></li>
+            <li><a class="nav__dropdown-link" href="product.html?product=2" data-i18n="nav_produto_3">Piaçava para Coberturas Naturais</a></li>
+          </ul>
         </li>
         <li class="nav__item">
           <a href="#contato" class="nav__link" data-i18n="nav_contato">Contato</a>

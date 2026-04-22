@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const navLinks = document.querySelectorAll('.nav__link');
   const header = document.querySelector('.header');
   const languageButtons = document.querySelectorAll('.language-btn');
+  const productDropdown = document.querySelector('.nav__item--dropdown');
+  const productDropdownToggle = document.querySelector('.nav__dropdown-toggle');
+  const productDropdownLinks = document.querySelectorAll('.nav__dropdown-link');
 
   function applyLanguage(language) {
     // Atualiza o botão ativo
@@ -26,6 +29,12 @@ document.addEventListener('DOMContentLoaded', function () {
   const urlParams = new URLSearchParams(window.location.search);
   const currentLanguage = urlParams.get('language') || 'pt'; // Padrão: português
   applyLanguage(currentLanguage);
+
+  productDropdownLinks.forEach(link => {
+    const targetUrl = new URL(link.href, window.location.origin);
+    targetUrl.searchParams.set('language', currentLanguage);
+    link.href = `${targetUrl.pathname}${targetUrl.search}`;
+  });
 
   languageButtons.forEach(button => {
     button.addEventListener('click', function () {
@@ -66,6 +75,30 @@ document.addEventListener('DOMContentLoaded', function () {
         navMenu.classList.remove('active');
         navToggle.classList.remove('active');
       }
+
+      if (productDropdown && !productDropdown.contains(e.target)) {
+        productDropdown.classList.remove('open');
+        if (productDropdownToggle) {
+          productDropdownToggle.setAttribute('aria-expanded', 'false');
+        }
+      }
+    });
+  }
+
+  if (productDropdown && productDropdownToggle) {
+    productDropdownToggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const isOpen = productDropdown.classList.toggle('open');
+      productDropdownToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    productDropdownLinks.forEach(link => {
+      link.addEventListener('click', function () {
+        productDropdown.classList.remove('open');
+        productDropdownToggle.setAttribute('aria-expanded', 'false');
+      });
     });
   }
 

@@ -4,6 +4,9 @@ const translations = {
     nav_inicio: "Início",
     nav_sobre: "Sobre",
     nav_produtos: "Produtos",
+    nav_produto_1: "Piaçava Cortada e Penteada",
+    nav_produto_2: "Coco de Piaçava Natural",
+    nav_produto_3: "Piaçava para Coberturas Naturais",
     nav_contato: "Contato",
     nav_orcamento: "Solicitar Orçamento",
 
@@ -88,6 +91,9 @@ const translations = {
     nav_inicio: "Home",
     nav_sobre: "About",
     nav_produtos: "Products",
+    nav_produto_1: "Cut and Combed Piassava",
+    nav_produto_2: "Natural Piassava Coconut",
+    nav_produto_3: "Piassava for Natural Roofing",
     nav_contato: "Contact",
     nav_orcamento: "Request a Quote",
 
