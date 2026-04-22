@@ -42,7 +42,6 @@
   border-radius: 1rem;
   overflow: hidden;
   height: clamp(320px, 42vw, 500px);
-  background: #d8d3c1;
 }
 
 .product-detail__image {
