@@ -11,6 +11,14 @@ document.addEventListener('DOMContentLoaded', function () {
   const productDropdownToggle = document.querySelector('.nav__dropdown-toggle');
   const productDropdownLinks = document.querySelectorAll('.nav__dropdown-link');
 
+  function updateDropdownProductLinks(language) {
+    productDropdownLinks.forEach(link => {
+      const targetUrl = new URL(link.href, window.location.origin);
+      targetUrl.searchParams.set('language', language);
+      link.href = `${targetUrl.pathname}${targetUrl.search}`;
+    });
+  }
+
   function applyLanguage(language) {
     // Atualiza o botão ativo
     languageButtons.forEach(button => {
@@ -29,12 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const urlParams = new URLSearchParams(window.location.search);
   const currentLanguage = urlParams.get('language') || 'pt'; // Padrão: português
   applyLanguage(currentLanguage);
-
-  productDropdownLinks.forEach(link => {
-    const targetUrl = new URL(link.href, window.location.origin);
-    targetUrl.searchParams.set('language', currentLanguage);
-    link.href = `${targetUrl.pathname}${targetUrl.search}`;
-  });
+  updateDropdownProductLinks(currentLanguage);
 
   languageButtons.forEach(button => {
     button.addEventListener('click', function () {
@@ -48,10 +51,15 @@ document.addEventListener('DOMContentLoaded', function () {
       // Atualiza a URL sem recarregar a página
       url.search = params.toString();
       window.history.replaceState({}, '', url);
+      updateDropdownProductLinks(selectedLanguage);
 
       // Opcional: Recarregar a página para aplicar o idioma
       // window.location.reload();
     });
+  });
+
+  document.addEventListener('languagechange', function (event) {
+    updateDropdownProductLinks(event.detail.lang);
   });
 
   // Mobile menu toggle

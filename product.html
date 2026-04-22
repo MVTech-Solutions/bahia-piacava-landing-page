@@ -5,7 +5,104 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Produto | Bahia Piacava</title>
+  <title data-i18n="page_title_product">Piaçava Cortada e Penteada | Bahia Piaçava</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" id="meta-description" content="Fibra de piaçava premium para produção de vassouras artesanais de alta qualidade. Material 100% natural e sustentável da Bahia. Orçamento grátis!">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Bahia Piaçava">
+  <meta name="language" content="pt-BR">
+
+  <!-- Canonical URL (atualizado dinamicamente) -->
+  <link rel="canonical" id="canonical-url" href="https://www.bahiapiacava.com.br/product.html?product=0">
+
+  <!-- Hreflang -->
+  <link rel="alternate" id="hreflang-pt" hreflang="pt-BR" href="https://www.bahiapiacava.com.br/product.html?product=0">
+  <link rel="alternate" id="hreflang-en" hreflang="en" href="https://www.bahiapiacava.com.br/product.html?product=0&language=en">
+  <link rel="alternate" hreflang="x-default" href="https://www.bahiapiacava.com.br/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" id="og-title" content="Piaçava Cortada e Penteada | Bahia Piaçava">
+  <meta property="og:description" id="og-description" content="Fibra de piaçava premium para produção de vassouras artesanais de alta qualidade. Material 100% natural e sustentável da Bahia.">
+  <meta property="og:image" content="https://www.bahiapiacava.com.br/assets/images/hero-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Produto de piaçava natural artesanal da Bahia Piaçava">
+  <meta property="og:url" id="og-url" content="https://www.bahiapiacava.com.br/product.html?product=0">
+  <meta property="og:type" content="product">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Bahia Piaçava">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" id="twitter-title" content="Piaçava Cortada e Penteada | Bahia Piaçava">
+  <meta name="twitter:description" id="twitter-description" content="Fibra de piaçava premium para produção de vassouras artesanais de alta qualidade. Material 100% natural e sustentável da Bahia.">
+  <meta name="twitter:image" content="https://www.bahiapiacava.com.br/assets/images/hero-image.png">
+  <meta name="twitter:image:alt" content="Produto de piaçava natural artesanal da Bahia Piaçava">
+  <meta name="twitter:site" content="@bahiapiacava">
+
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="assets/images/favicon.ico">
+  <meta name="theme-color" content="#2d5016">
+
+  <!-- Atualiza meta tags dinamicamente conforme o produto na URL -->
+  <script>
+    (function () {
+      var productMeta = {
+        '0': {
+          title: 'Piaçava Cortada e Penteada | Bahia Piaçava',
+          description: 'Fibra de piaçava premium para produção de vassouras artesanais de alta qualidade. Material 100% natural e sustentável da Bahia. Orçamento grátis!'
+        },
+        '1': {
+          title: 'Coco de Piaçava Natural | Bahia Piaçava',
+          description: 'Coco de piaçava natural para artesanato sustentável e aplicações decorativas. Material 100% biodegradável da Bahia. Orçamento grátis!'
+        },
+        '2': {
+          title: 'Piaçava para Coberturas Naturais | Bahia Piaçava',
+          description: 'Piaçava para cobertura natural de quiosques e cabanas com resistência e isolamento térmico. Material sustentável da Bahia. Orçamento grátis!'
+        }
+      };
+      var params = new URLSearchParams(window.location.search);
+      var id = params.get('product') || '0';
+      var meta = productMeta[id] || productMeta['0'];
+      var baseUrl = 'https://www.bahiapiacava.com.br/product.html?product=' + encodeURIComponent(id);
+
+      document.title = meta.title;
+      document.getElementById('meta-description').content = meta.description;
+      document.getElementById('canonical-url').href = baseUrl;
+      document.getElementById('hreflang-pt').href = baseUrl;
+      document.getElementById('hreflang-en').href = baseUrl + '&language=en';
+      document.getElementById('og-title').content = meta.title;
+      document.getElementById('og-description').content = meta.description;
+      document.getElementById('og-url').content = baseUrl;
+      document.getElementById('twitter-title').content = meta.title;
+      document.getElementById('twitter-description').content = meta.description;
+    })();
+  </script>
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json" id="breadcrumb-schema">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Início",
+        "item": "https://www.bahiapiacava.com.br"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Produtos",
+        "item": "https://www.bahiapiacava.com.br#produtos"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Preconnect para performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -36,9 +133,9 @@
             </button>
           </div>
           <ul class="nav__dropdown-menu" aria-label="Lista de produtos">
-            <li><a class="nav__dropdown-link" href="product.html?product=0" data-i18n="nav_produto_1">Piacava Cortada e Penteada</a></li>
-            <li><a class="nav__dropdown-link" href="product.html?product=1" data-i18n="nav_produto_2">Coco de Piacava Natural</a></li>
-            <li><a class="nav__dropdown-link" href="product.html?product=2" data-i18n="nav_produto_3">Piacava para Coberturas Naturais</a></li>
+            <li><a class="nav__dropdown-link" href="product.html?product=0" data-i18n="nav_produto_1">Piaçava Cortada e Penteada</a></li>
+            <li><a class="nav__dropdown-link" href="product.html?product=1" data-i18n="nav_produto_2">Coco de Piaçava Natural</a></li>
+            <li><a class="nav__dropdown-link" href="product.html?product=2" data-i18n="nav_produto_3">Piaçava para Coberturas Naturais</a></li>
           </ul>
         </li>
         <li class="nav__item">
@@ -62,15 +159,15 @@
 
   <main class="product-page">
     <div class="container product-page__container">
-      <a class="product-page__back" id="back-link" href="index.html">Voltar para produtos</a>
+      <a class="product-page__back" id="back-link" href="index.html" data-i18n="product_back">Voltar para produtos</a>
 
       <section class="product-detail" aria-labelledby="product-title">
         <div class="product-detail__gallery">
           <img id="product-image" class="product-detail__image" src="" alt="Imagem do produto">
-          <button class="product-detail__control product-detail__control--prev" id="prev-image" aria-label="Imagem anterior">
+          <button class="product-detail__control product-detail__control--prev" id="prev-image" aria-label="Imagem anterior" data-i18n-aria-label="product_prev_image">
             &#10094;
           </button>
-          <button class="product-detail__control product-detail__control--next" id="next-image" aria-label="Próxima imagem">
+          <button class="product-detail__control product-detail__control--next" id="next-image" aria-label="Próxima imagem" data-i18n-aria-label="product_next_image">
             &#10095;
           </button>
           <div class="product-detail__counter" id="image-counter">1 / 1</div>
@@ -90,18 +187,18 @@
       <div class="footer__content">
         <div class="footer__section">
           <div class="footer__logo">
-            <img src="assets/images/logo_piacava.avif" alt="Bahia Piacava - Vassouras de Piacava Natural" class="footer__logo-img"
+            <img src="assets/images/logo_piacava.avif" alt="Bahia Piaçava - Vassouras de Piaçava Natural" class="footer__logo-img"
               width="auto" height="100" loading="lazy">
           </div>
           <p class="footer__description" data-i18n="footer_desc">
-            <strong>Producao artesanal de vassouras de piacava</strong> com qualidade, tradicao e sustentabilidade. Ha mais de 30 anos levando o
-            melhor da <strong>fibra natural brasileira</strong> para todo o pais.
+            <strong>Produção artesanal de vassouras de piaçava</strong> com qualidade, tradição e sustentabilidade. Há mais de 30 anos levando o
+            melhor da <strong>fibra natural brasileira</strong> para todo o país.
           </p>
         </div>
         <div class="footer__section">
           <h4 class="footer__title" data-i18n="footer_empresa">Empresa</h4>
           <ul class="footer__links">
-            <li><a href="index.html#sobre" class="footer__link" data-i18n="footer_hist">Nossa Historia</a></li>
+            <li><a href="index.html#sobre" class="footer__link" data-i18n="footer_hist">Nossa História</a></li>
             <li><a href="index.html#sobre" class="footer__link" data-i18n="footer_sust">Sustentabilidade</a></li>
             <li><a href="index.html#produtos" class="footer__link" data-i18n="footer_prod">Produtos</a></li>
             <li><a href="index.html#sobre" class="footer__link" data-i18n="footer_qual">Qualidade</a></li>
@@ -140,8 +237,8 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p class="footer__copyright" data-i18n="footer_copyright">&copy; 2025 Bahia Piacava. Todos os direitos reservados.
-          Vassouras de piacava natural artesanal da Bahia.</p>
+        <p class="footer__copyright" data-i18n="footer_copyright">&copy; 2025 Bahia Piaçava. Todos os direitos reservados.
+          Vassouras de piaçava natural artesanal da Bahia.</p>
       </div>
     </div>
   </footer>

@@ -1,6 +1,7 @@
 const translations = {
   pt: {
     page_title: "Bahia Piaçava - Produtos Naturais de Piaçava",
+    page_title_product: "Bahia Piaçava - Detalhes do Produto",
     nav_inicio: "Início",
     nav_sobre: "Sobre",
     nav_produtos: "Produtos",
@@ -9,6 +10,9 @@ const translations = {
     nav_produto_3: "Piaçava para Coberturas Naturais",
     nav_contato: "Contato",
     nav_orcamento: "Solicitar Orçamento",
+    product_back: "Voltar para produtos",
+    product_prev_image: "Imagem anterior",
+    product_next_image: "Próxima imagem",
 
     hero_title: "Produtos Naturais de <span class='hero__title--highlight'>Piaçava</span>",
     hero_desc: "Há mais de 30 anos produzindo vassouras, escovas e cordas de alta qualidade com fibras naturais de piaçava. Tradição familiar e sustentabilidade em cada produto.",
@@ -88,6 +92,7 @@ const translations = {
   },
   en: {
     page_title: "Bahia Piassava - Natural Piassava Products",
+    page_title_product: "Bahia Piassava - Product Details",
     nav_inicio: "Home",
     nav_sobre: "About",
     nav_produtos: "Products",
@@ -96,6 +101,9 @@ const translations = {
     nav_produto_3: "Piassava for Natural Roofing",
     nav_contato: "Contact",
     nav_orcamento: "Request a Quote",
+    product_back: "Back to products",
+    product_prev_image: "Previous image",
+    product_next_image: "Next image",
 
     hero_title: "Natural <span class='hero__title--highlight'>Piassava</span> Products",
     hero_desc: "For over 30 years producing high-quality brooms, brushes, and ropes with natural piassava fibers. Family tradition and sustainability in every product.",
@@ -179,6 +187,7 @@ let currentLang = 'pt';
 
 function setLanguage(lang) {
   currentLang = lang;
+  document.documentElement.lang = lang === 'en' ? 'en' : 'pt-BR';
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     const translation = translations[lang][key];
@@ -195,9 +204,21 @@ function setLanguage(lang) {
     }
   });
 
+  document.querySelectorAll('[data-i18n-aria-label]').forEach(el => {
+    const key = el.getAttribute('data-i18n-aria-label');
+    const translation = translations[lang][key];
+    if (translation) {
+      el.setAttribute('aria-label', translation);
+    }
+  });
+
   document.querySelectorAll('.language-btn').forEach(btn => {
     btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
   });
+
+  document.dispatchEvent(new CustomEvent('languagechange', {
+    detail: { lang }
+  }));
 }
 
 document.addEventListener('DOMContentLoaded', () => {

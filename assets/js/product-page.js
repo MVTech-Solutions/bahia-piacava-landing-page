@@ -1,8 +1,16 @@
 (function () {
   const productCatalog = {
     0: {
-      fallbackTitle: 'Piacava Cortada e Penteada',
-      fallbackDescription: 'Fibra de piacava premium para producao de vassouras artesanais de alta qualidade.',
+      content: {
+        pt: {
+          title: 'Piaçava Cortada e Penteada',
+          description: 'Fibra de piaçava premium para produção de vassouras artesanais de alta qualidade.'
+        },
+        en: {
+          title: 'Cut and Combed Piassava',
+          description: 'Premium piassava fiber for crafting high-quality handmade brooms.'
+        }
+      },
       images: [
         'assets/images/broom/broom-main.jpeg',
         'assets/images/broom/product-1.jpeg',
@@ -16,8 +24,16 @@
       ]
     },
     1: {
-      fallbackTitle: 'Coco de Piacava Natural',
-      fallbackDescription: 'Coco de piacava natural para artesanato sustentavel e aplicacoes decorativas.',
+      content: {
+        pt: {
+          title: 'Coco de Piaçava Natural',
+          description: 'Coco de piaçava natural para artesanato sustentável e aplicações decorativas.'
+        },
+        en: {
+          title: 'Natural Piassava Coconut',
+          description: 'Natural piassava coconut for sustainable handicrafts and decorative applications.'
+        }
+      },
       images: [
         'assets/images/coconut/product-1.jpg',
         'assets/images/coconut/product-2.jpg',
@@ -26,8 +42,16 @@
       ]
     },
     2: {
-      fallbackTitle: 'Piacava para Coberturas Naturais',
-      fallbackDescription: 'Piacava para cobertura natural com resistencia e isolamento termico.',
+      content: {
+        pt: {
+          title: 'Piaçava para Coberturas Naturais',
+          description: 'Piaçava para cobertura natural com resistência e isolamento térmico.'
+        },
+        en: {
+          title: 'Piassava for Natural Roofing',
+          description: 'Piassava for natural roofing with durability and thermal insulation.'
+        }
+      },
       images: [
         'assets/images/kiosk/kiosk-main.jpeg',
         'assets/images/kiosk/product-1.avif',
@@ -45,10 +69,6 @@
   const productId = params.get('product') || '0';
   const product = productCatalog[productId] || productCatalog[0];
 
-  const title = params.get('title') || product.fallbackTitle;
-  const description = params.get('description') || product.fallbackDescription;
-  const language = params.get('language') || 'pt';
-
   const titleElement = document.getElementById('product-title');
   const descriptionElement = document.getElementById('product-description');
   const imageElement = document.getElementById('product-image');
@@ -58,20 +78,38 @@
   const backLink = document.getElementById('back-link');
   const contactLink = document.getElementById('contact-link');
 
-  titleElement.textContent = title;
-  descriptionElement.textContent = description;
-
-  backLink.href = `index.html?language=${encodeURIComponent(language)}#produtos`;
-  if (contactLink) {
-    contactLink.href = `index.html?language=${encodeURIComponent(language)}#contato`;
-  }
-
   let currentIndex = 0;
 
+  function getCurrentLanguage() {
+    return new URLSearchParams(window.location.search).get('language') || 'pt';
+  }
+
+  function updateNavigationLinks(language) {
+    backLink.href = `index.html?language=${encodeURIComponent(language)}#produtos`;
+
+    if (contactLink) {
+      contactLink.href = `index.html?language=${encodeURIComponent(language)}#contato`;
+    }
+  }
+
+  function getLocalizedProduct(language) {
+    return product.content[language] || product.content.pt;
+  }
+
+  function applyLocalizedContent(language) {
+    const localizedProduct = getLocalizedProduct(language);
+    titleElement.textContent = localizedProduct.title;
+    descriptionElement.textContent = localizedProduct.description;
+    updateNavigationLinks(language);
+    updateImage();
+  }
+
   function updateImage() {
+    const language = getCurrentLanguage();
+    const localizedProduct = getLocalizedProduct(language);
     const currentImage = product.images[currentIndex];
     imageElement.src = currentImage;
-    imageElement.alt = `${title} - imagem ${currentIndex + 1}`;
+    imageElement.alt = `${localizedProduct.title} - image ${currentIndex + 1}`;
     counterElement.textContent = `${currentIndex + 1} / ${product.images.length}`;
   }
 
@@ -98,5 +136,9 @@
     }
   });
 
-  updateImage();
+  document.addEventListener('languagechange', (event) => {
+    applyLocalizedContent(event.detail.lang);
+  });
+
+  applyLocalizedContent(getCurrentLanguage());
 })();
