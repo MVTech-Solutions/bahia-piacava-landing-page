@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Produto | Bahia Piacava</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/product-page.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header" role="banner">
+    <nav class="nav container" role="navigation" aria-label="Navegacao principal">
+      <div class="nav__logo">
+        <img src="assets/images/logo_piacava.avif" alt="Bahia Piacava - Vassouras de Piacava Natural Artesanais"
+          class="nav__logo-img" width="auto" height="70" loading="eager">
+      </div>
+      <ul class="nav__menu" id="nav-menu">
+        <li class="nav__item">
+          <a href="index.html#inicio" class="nav__link" data-i18n="nav_inicio">Inicio</a>
+        </li>
+        <li class="nav__item">
+          <a href="index.html#sobre" class="nav__link" data-i18n="nav_sobre">Sobre</a>
+        </li>
+        <li class="nav__item">
+          <a href="index.html#produtos" class="nav__link" data-i18n="nav_produtos">Produtos</a>
+        </li>
+        <li class="nav__item">
+          <a href="index.html#contato" class="nav__link" data-i18n="nav_contato">Contato</a>
+        </li>
+      </ul>
+      <div class="nav__actions">
+        <div class="language-selector">
+          <button class="language-btn active" data-lang="pt" aria-label="Portugues">PT</button>
+          <button class="language-btn" data-lang="en" aria-label="English">EN</button>
+        </div>
+        <a href="index.html#contato" class="nav__cta" data-i18n="nav_orcamento">Solicitar Orcamento</a>
+      </div>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menu de navegacao" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main class="product-page">
+    <div class="container product-page__container">
+      <a class="product-page__back" id="back-link" href="index.html">Voltar para produtos</a>
+
+      <section class="product-detail" aria-labelledby="product-title">
+        <div class="product-detail__gallery">
+          <img id="product-image" class="product-detail__image" src="" alt="Imagem do produto">
+          <button class="product-detail__control product-detail__control--prev" id="prev-image" aria-label="Imagem anterior">
+            &#10094;
+          </button>
+          <button class="product-detail__control product-detail__control--next" id="next-image" aria-label="Próxima imagem">
+            &#10095;
+          </button>
+          <div class="product-detail__counter" id="image-counter">1 / 1</div>
+        </div>
+
+        <div class="product-detail__content">
+          <h1 id="product-title" class="product-detail__title"></h1>
+          <p id="product-description" class="product-detail__description"></p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__container container">
+      <div class="footer__content">
+        <div class="footer__section">
+          <div class="footer__logo">
+            <img src="assets/images/logo_piacava.avif" alt="Bahia Piacava - Vassouras de Piacava Natural" class="footer__logo-img"
+              width="auto" height="100" loading="lazy">
+          </div>
+          <p class="footer__description" data-i18n="footer_desc">
+            <strong>Producao artesanal de vassouras de piacava</strong> com qualidade, tradicao e sustentabilidade. Ha mais de 30 anos levando o
+            melhor da <strong>fibra natural brasileira</strong> para todo o pais.
+          </p>
+        </div>
+        <div class="footer__section">
+          <h4 class="footer__title" data-i18n="footer_empresa">Empresa</h4>
+          <ul class="footer__links">
+            <li><a href="index.html#sobre" class="footer__link" data-i18n="footer_hist">Nossa Historia</a></li>
+            <li><a href="index.html#sobre" class="footer__link" data-i18n="footer_sust">Sustentabilidade</a></li>
+            <li><a href="index.html#produtos" class="footer__link" data-i18n="footer_prod">Produtos</a></li>
+            <li><a href="index.html#sobre" class="footer__link" data-i18n="footer_qual">Qualidade</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h4 class="footer__title" data-i18n="footer_contato">Contato</h4>
+          <div class="footer__contact">
+            <p class="footer__contact-item">
+              Ilheus, BA
+              <i data-lucide="map-pin" class="footer__contact-icon" aria-hidden="true"></i>
+            </p>
+            <p class="footer__contact-item">
+              <a href="tel:+5573991856666">(73) 99185-6666</a>
+              <i data-lucide="phone" class="footer__contact-icon" aria-hidden="true"></i>
+            </p>
+            <p class="footer__contact-item">
+              <a href="mailto:venda@piacavabahia.com.br">venda@piacavabahia.com.br</a>
+              <i data-lucide="mail" class="footer__contact-icon" aria-hidden="true"></i>
+            </p>
+            <p class="footer__contact-item">
+              <a>35.128.204/0001-97</a>
+              <i data-lucide="building-2" class="footer__contact-icon" aria-hidden="true"></i>
+            </p>
+            <p class="footer__contact-item-icons">
+              <a href="https://www.facebook.com/piacavabahia" target="_blank" rel="noopener"
+                aria-label="Facebook da Bahia Piacava">
+                <i data-lucide="facebook" class="footer__social-media" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.instagram.com/forrosepiacavas/" target="_blank" rel="noopener"
+                aria-label="Instagram da Bahia Piacava">
+                <i data-lucide="instagram" class="footer__social-media" aria-hidden="true"></i>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright" data-i18n="footer_copyright">&copy; 2025 Bahia Piacava. Todos os direitos reservados.
+          Vassouras de piacava natural artesanal da Bahia.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/product-page.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      lucide.createIcons();
+    });
+  </script>
+</body>
+
+</html>

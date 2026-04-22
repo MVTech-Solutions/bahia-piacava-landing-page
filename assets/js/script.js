@@ -85,102 +85,37 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // ===============================
-  // PRODUCT MODAL & CAROUSEL
+  // PRODUCT PAGE NAVIGATION
   // ===============================
-  // Defina as imagens de cada produto pelo índice (0, 1, 2)
-  const productImages = [
-    [
-      'assets/images/broom/product-1.jpeg',
-      'assets/images/broom/product-2.avif',
-      'assets/images/broom/product-3.avif',
-      'assets/images/broom/product-4.avif',
-      'assets/images/broom/product-5.avif',
-      'assets/images/broom/product-6.avif',
-      'assets/images/broom/product-7.avif',
-      'assets/images/broom/product-8.avif',
-    ],
-    [
-      'assets/images/coconut/product-1.jpg',
-      'assets/images/coconut/product-2.jpg',
-      'assets/images/coconut/product-3.avif',
-      'assets/images/coconut/product-4.avif',
-    ],
-    [
-      'assets/images/kiosk/kiosk-main.jpeg',
-      'assets/images/kiosk/product-1.avif',
-      'assets/images/kiosk/product-2.avif',
-      'assets/images/kiosk/product-3.avif',
-      'assets/images/kiosk/product-4.avif',
-      'assets/images/kiosk/product-5.avif',
-      'assets/images/kiosk/product-6.avif',
-      'assets/images/kiosk/product-7.avif',
-    ]
-  ];
+  function openProductPage(productIdx, card) {
+    const title = card.querySelector('.product-card__title')?.textContent?.trim() || '';
+    const description = card.querySelector('.product-card__description')?.textContent?.trim() || '';
+    const language = new URLSearchParams(window.location.search).get('language') || 'pt';
 
-  const modal = document.getElementById('product-modal');
-  if (modal) {
-    const overlay = modal.querySelector('.product-modal__overlay');
-    const closeBtn = modal.querySelector('.product-modal__close');
-    const img = modal.querySelector('.carousel__image');
-    const prevBtn = modal.querySelector('.carousel__prev');
-    const nextBtn = modal.querySelector('.carousel__next');
-    // const dotsContainer = modal.querySelector('.carousel__dots');
-
-    let currentProduct = 0;
-    let currentIndex = 0;
-
-    function openModal(productIdx, card) {
-      currentProduct = productIdx;
-      currentIndex = 0;
-      updateCarousel();
-
-      const title = card.querySelector('.product-card__title')?.textContent || '';
-      const description = card.querySelector('.product-card__description')?.textContent || '';
-
-      modal.querySelector('.product-modal__title').textContent = title;
-      modal.querySelector('.product-modal__description').textContent = description;
-
-      modal.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeModal() {
-      modal.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-
-    function updateCarousel() {
-      const images = productImages[currentProduct];
-      img.src = images[currentIndex];
-      img.alt = `Imagem ${currentIndex + 1} do produto`;
-    }
-
-    prevBtn.addEventListener('click', () => {
-      const images = productImages[currentProduct];
-      currentIndex = (currentIndex - 1 + images.length) % images.length;
-      updateCarousel();
+    const params = new URLSearchParams({
+      product: String(productIdx),
+      title,
+      description,
+      language
     });
 
-    nextBtn.addEventListener('click', () => {
-      const images = productImages[currentProduct];
-      currentIndex = (currentIndex + 1) % images.length;
-      updateCarousel();
-    });
-
-    closeBtn.addEventListener('click', closeModal);
-    overlay.addEventListener('click', closeModal);
-
-    // ESC fecha o modal
-    document.addEventListener('keydown', (e) => {
-      if (modal.classList.contains('active') && e.key === 'Escape') closeModal();
-    });
-
-    // Clique nos cards de produto
-    document.querySelectorAll('.product-card').forEach((card, idx) => {
-      card.style.cursor = 'pointer';
-      card.addEventListener('click', () => openModal(idx, card));
-    });
+    window.location.href = `product.html?${params.toString()}`;
   }
+
+  // Clique nos cards de produto
+  document.querySelectorAll('.product-card').forEach((card, idx) => {
+    card.style.cursor = 'pointer';
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('role', 'link');
+
+    card.addEventListener('click', () => openProductPage(idx, card));
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openProductPage(idx, card);
+      }
+    });
+  });
 });
 
 // ===============================
@@ -214,6 +149,9 @@ function initSmoothScrolling() {
 // ===============================
 function initContactForm() {
   const form = document.getElementById('contact-form');
+  if (!form) {
+    return;
+  }
 
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
